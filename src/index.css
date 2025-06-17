@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hoverEffect {
+    @apply duration-300 cursor-pointer;
+  }
+  .headerSedenavLi {
+    @apply hover:underline underline-offset-2 cursor-pointer text-gray-300 hover:text-white;
+  }
+}
+
+/* In your styles.css or any global CSS file */
+/* Override Toastify success toast styles */
+body{
+  background-color: #fdfaf4;
+}
+.Toastify__toast-theme--colored .Toastify__toast--success {
+  background-color: #46A29F; /* Customize background color */
+ /* Optional: Customize text color if desired */
+}
+
+/* ============= NavLink active Start here ============== */
+nav .active li {
+  color: #E6C78A;
+  -webkit-text-stroke: 0.5px #46A29F; /* Border around the letters */
+  -webkit-text-fill-color: #E6C78A;  
+  font-weight: 900;
+  
+}
+
+@media screen and (max-width: 665px) {
+  nav .active li {
+    color: white;
+    font-weight: 600;
+    text-decoration: 1px underline white;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* ============= NavLink active End here ================ */

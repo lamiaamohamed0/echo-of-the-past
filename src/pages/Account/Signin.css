@@ -1,0 +1,40 @@
+
+.input-field {
+    background-color: #A79277;
+    color: white; 
+    border: 1px solid white;
+    border-radius: 4px;
+  }
+
+  .input-field::placeholder {
+    color: white; 
+  }
+  
+  .label {
+    color: #A79277; 
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .google-login-button .google-login-button-text {
+    color: black; 
+  }
+
+  /* In your Signin.css */
+.moving-section {
+  animation: moveLeftRight 2s linear infinite; 
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(-10px); 
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-10px); 
+  }
+}
+
+  

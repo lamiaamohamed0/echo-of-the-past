@@ -1,0 +1,64 @@
+
+.input-field {
+    background-color: #c5ab8a;
+    color: white; 
+    border: 1px solid white;
+    border-radius: 4px;
+  }
+
+  .input-field::placeholder {
+    color: white; 
+  }
+  
+  .label {
+    color: #A79277; 
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .google-login-button .google-login-button-text {
+    color: black; 
+  }
+
+  .custom-checkbox {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-color: #f5e3cc;
+    border: 2px solid #5F4C34;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  input[type="checkbox"]:checked + label {
+    background-color: #46A29F; 
+    border-color: #46A29F; 
+  }
+  
+  input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    color: white;
+    position: absolute;
+    bottom:-3.5px;
+    left: 2px;
+    font-size: 12px;
+  }
+  
+
+.moving-section {
+  animation: moveLeftRight 2s linear infinite; 
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(-10px); 
+  }
+  50% {
+    transform: translateX(3px); 
+  }
+  100% {
+    transform: translateX(-10px); 
+  }
+}
+
+  

@@ -1,0 +1,203 @@
+/* Style for the animated background image */
+/* Style for the animated background image */
+/* Header.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2s infinite;
+}
+.nav-item-active {
+    color: #46A29F; /* Choose your color */
+  }
+  
+.banner-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundZoom 7s  infinite alternate;
+    z-index: 0;
+    overflow: hidden; /* منع خروج الخلفية */
+    position: relative;
+    opacity:0.7; /* لضمان أن العنصر محكوم بالمكان */
+  }
+  
+   /* Background zoom animation */
+   @keyframes backgroundZoom {
+    0% {
+      transform: scale(1.3);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1.02);
+      opacity: 0.7;
+    }
+    
+  }
+  /* لإزالة أي تمرير للشاشة بسبب الزووم */
+  body {
+    overflow-x: hidden; /* منع التمرير الأفقي */
+  }
+  
+  
+  /* Optional: Style for overlay */
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    z-index: 50;
+  }
+  
+  
+ 
+ 
+  
+  nav {
+    padding-top: 100px; /* Adjust the spacing between the top of the header and its content */
+  }
+  
+  /* Adjust flex item spacing */
+  nav ul {
+    margin-top: 17px; /* Adding a little margin to make it lower */
+    display: flex; /* Ensures that items are aligned in a row */
+    justify-content: space-between; /* Space out the links evenly */
+  }
+  
+  nav ul li {
+    margin: 0 7px; /* Adjust the horizontal spacing between links */
+  }
+  nav ul li  {
+    font-family: 'Poppins', sans-serif; /* Use a clean, modern font */
+    font-size: 23px; /* Adjust the size for better readability */
+    font-weight: 600; /* Make the font slightly bold for a professional look */
+
+
+    border-radius: 5px; /* Set a professional dark color for the links */
+    text-decoration: none; /* Remove underlines from links */
+    padding: 2px 20px; /* Add padding for spacing */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+  }
+  .linkStyle {
+    font-family: 'Poppins'; /* Use a clean, modern font */
+    font-size: 15px; /* Adjust the size for better readability */
+    font-weight: 600; /* Make the font slightly bold for a professional look */
+    color: #fdfaf4; /* Set a professional dark color for the links */
+    text-decoration: none; /* Remove underlines from links */
+    padding: 10px 15px; /* Add padding for spacing */
+    transition: color 0.3s ease, transform 0.5s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .linkStyle:hover {
+    color: #E6C78A; /* Change color on hover */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25); /* Add border bottom */
+    transform: scale(1); /* Slightly scale the link */
+  }
+  
+  
+  nav ul li:hover {
+  
+
+border-bottom: 3px solid rgba(255,255,255,.25);
+  
+/* Highlight the link with your brand color */
+    transform: scale(1.05); /* Slight zoom on hover for a modern effect */
+  }
+  
+  
+  .right-section {
+    margin-top: 4px; /* Adjust the space between the cart and the user icon */
+  }
+  
+  /* General Styling for the Navigation List */
+
+
+
+
+  /* Dropdown Menu (User Menu) */
+.user-menu {
+    position: absolute;
+    width: 100px; /* Slightly wider for better readability */
+    background-color: #46A29F; /* Greenish color */
+    border-radius: 8px; /* Slightly more rounded corners for modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* Smooth downward effect */
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s ease-out; /* Smooth transition */
+  }
+  
+  /* When the dropdown is active */
+  .user-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Final position */
+  }
+  
+  /* Styling for individual menu items */
+  .user-menu li {
+    padding: 5px 16px;
+    color: #fdfaf4;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+
+  
+  /* Arrow icon for dropdown */
+  .user-menu-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  /* Rotate arrow when the dropdown is open */
+  .user-menu-toggle.active .arrow {
+    transform: rotate(180deg);  /* Rotate the dropdown arrow */
+  }
+  
+  
